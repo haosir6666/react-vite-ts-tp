@@ -1,26 +1,12 @@
 {
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
   "compilerOptions": {
-    "target": "ESNext", // 代表你想使用哪个版本的ECMAScript来编译代码
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],// 代表你想使用的库
-    "allowJs": false, // 是否允许编译js文件
-    "skipLibCheck": false, // 是否跳过对声明文件的类型检查
-    "esModuleInterop": false,// 是否允许使用import * as xxx from "module"语法
-    "allowSyntheticDefaultImports": true,// 是否允许使用import xxx from "module"语法
-    "strict": true,// 是否启用严格模式
-    "forceConsistentCasingInFileNames": true,// 是否强制使用一致的大小写
-    "module": "ESNext",// 指定模块代码生成方式，"none"表示不生成模块代码，"commonjs"表示使用commonjs模块规范，"amd"表示使用amd模块规范，"umd"表示使用umd模块规范，"system"表示使用systemjs模块规范，"es6"表示使用es6模块规范，"es2015"表示使用es2015模块规范，"esnext"表示使用esnext模块规范
-    "moduleResolution": "Node",// 指定模块解析策略，"node"表示使用Node.js的模块解析策略，"classic"表示使用TypeScript的模块解析策略
-    "resolveJsonModule": true,// 是否允许导入json文件
-    "isolatedModules": true,// 是否将每个文件作为单独的模块（与“--outFile”或“--outDir”选项不兼容）
-    "noEmit": true,// 是否生成输出文件
-    "jsx": "react", // 指定jsx的版本
-    "experimentalDecorators": true,// 是否启用装饰器
-    "baseUrl": ".",// 用于解析非相对模块名称的基本目录
-    "paths": {// 用于指定模块的路径映射
-      "@/*": [// 匹配src目录下的所有文件
-        "src/*"
-      ]
-    }
+    "baseUrl": ".", //查询的基础路径
+    "paths": { "@/*": ["./src/*"] }, //路径映射,配合别名使用
   },
-  "include": ["./src"]// 指定要编译的文件夹
+
 }
