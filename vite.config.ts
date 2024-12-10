@@ -48,6 +48,13 @@ export default defineConfig({
         })
     ],
     base: './',
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: '@import "@/assets/style/variables.scss";' // 添加变量文件
+            },
+        },
+    },
     build: {
         outDir: 'dist', // 输出目录
         target: 'modules',

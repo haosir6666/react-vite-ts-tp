@@ -1,0 +1,22 @@
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background: url(@/assets/image/blhx.png) center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  filter: blur(0px);
+}
+.bg::before {
+  content: ''; /* 必须设置content才能显示伪元素 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* 使用bottom确保覆盖整个区域 */
+  background-color: rgba(0, 0, 0, 0.4); /* 设置半透明黑色滤层 */
+  z-index: -1; /* 使滤层位于底层 */
+}

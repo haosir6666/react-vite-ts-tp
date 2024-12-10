@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,html,#root {
+  width: 100vw !important;
+  height: 100vh !important;
+  user-select: none;
+  color: $font-color;
+  font-size: $font-size;
+}
